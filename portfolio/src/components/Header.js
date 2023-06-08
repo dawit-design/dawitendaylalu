@@ -1,5 +1,5 @@
 import react from "react";
-import Typed from "react-Typed";
+import Typed from "react-typed";
 
 export default function Header() {
   return (
@@ -8,7 +8,7 @@ export default function Header() {
         <h1>Software Engineer</h1>
         <Typed
           className="typed-text"
-          string={[
+          strings={[
             "Web Design",
             "Web Development",
             "Mobile Application Development",

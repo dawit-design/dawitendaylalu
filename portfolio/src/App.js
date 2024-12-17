@@ -1,19 +1,23 @@
+// App.js
+
 import './App.css';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Projects from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer'
+import { Routes, Route } from 'react-router-dom';  // No need to import Router here
+
 function App() {
   return (
     <div className="App">
-      <>
-      <h1>Welcome to my portfolio!</h1>
       <Navbar />
-      <Header />
-      
-      <Router>
-        <Route exac path='/' components={Header}><Header /></Route>
-      </Router>
-      </>
+      <Routes>  {/* Use Routes and Route to define navigation */}
+        <Route path="/" element={<Header />} />  {/* Home Route */}
+        <Route path="/projects-dev" element={<Projects />} />  {/* Projects Route */}
+        <Route path="/contact" element={<Contact />} /> 
+      </Routes>
+      < Footer />
     </div>
   );
 }
